@@ -78,10 +78,6 @@ def gatherJobListWrapper(wrapperClass="page-job-list-wrapper"):
         print(job.get_json())
         print()
 
-
-    
-
-
 def clicksOnDepartmentnLocation(department="jobDepartment", location="jobLocation"):
     """
         Clicks department and location
@@ -98,12 +94,6 @@ def clicksOnDepartmentnLocation(department="jobDepartment", location="jobLocatio
                         gatherJobListWrapper()
 
 def getPage():
-      
-    #departments = getDetails(name="jobDepartment")    
-    #locations = getDetails(name="jobLocation") 
-    #print(departments)
-    #print(locations)
-
     clicksOnDepartmentnLocation()
 
 if __name__ == "__main__":
