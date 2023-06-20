@@ -17,7 +17,9 @@ class JobListWrapper:
         self.driver.get("{base_url}{api}".format(base_url=self.base_url, api=self.home_api))
 
     def _gatherJobListWrapper(self, wrapperClass=HtmlKeys.PAGE_JOB_LIST_WRAPPER):
-        
+        """
+            gathers job list wrapper information
+        """
 
         for wrapper in self.driver.find_elements(By.CLASS_NAME, wrapperClass):
 
@@ -65,7 +67,11 @@ class JobListWrapper:
                             locOption.click()
                             self._gatherJobListWrapper()
 
-    def fetchPage(self):
+    def fetchHomePage(self):
+        """
+            fetch page information from homepage
+        """
+        
         self._clicksOnDepartmentnLocation()
 
     
