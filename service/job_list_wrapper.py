@@ -1,4 +1,4 @@
-from dtos.urls import Urls, Apis
+from dtos.urls import WebUrls, WebApis
 from selenium import webdriver 
 from selenium.webdriver.common.by import By
 from dtos.job_keys import JobKeys, HtmlKeys
@@ -11,8 +11,8 @@ class JobListWrapper:
 
     def __init__(self):
         
-        self.base_url = Urls.CERMATI_BASE_URL
-        self.home_api = Apis.HOME_PAGE
+        self.base_url = WebUrls.CERMATI_BASE_URL
+        self.home_api = WebApis.HOME_PAGE
         self.driver=webdriver.Chrome()
         self.driver.get("{base_url}{api}".format(base_url=self.base_url, api=self.home_api))
 
@@ -71,7 +71,7 @@ class JobListWrapper:
         """
             fetch page information from homepage
         """
-        
+
         self._clicksOnDepartmentnLocation()
 
     
