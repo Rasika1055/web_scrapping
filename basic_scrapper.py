@@ -3,35 +3,12 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from dtos.job_keys import JobKeys
+from dtos.base_job import BaseJobClass
 
 url='https://www.cermati.com/karir/lowongan'
 driver=webdriver.Chrome()
 driver.get(url)
-
-class JobKeys:
-    """
-        Basic job keys
-    """
-    LOCATION = "location"
-    TITLE = "title"
-    SUBTITLE = "subtitle"
-    JOB_TYPE = "job_type"
-    URL = "url"
-
-
-class BaseJobClass:
-    """
-        Basic Job Class
-    """
-    def __init__(self, kwargs):
-        self.title = kwargs.get(JobKeys.TITLE)
-        self.subtitle = kwargs.get(JobKeys.SUBTITLE)
-        self.url = kwargs.get(JobKeys.URL)
-        self.location = kwargs.get(JobKeys.LOCATION)
-        self.job_type = kwargs.get(JobKeys.JOB_TYPE)
-    
-    def get_json(self):
-        return self.__dict__
 
 def getDetails(name):
     """
