@@ -64,8 +64,7 @@ def clicksOnDepartmentnLocation(department="jobDepartment", location="jobLocatio
         for deptOption in eachDepartmentSelectTag.find_elements(By.TAG_NAME,'option'):
             for eachLocationSelectTag in driver.find_elements(By.NAME, location):
                 for locOption in eachLocationSelectTag.find_elements(By.TAG_NAME,'option'):
-                    if deptOption != "All Department" or locOption != "All Location":
-                            
+                    if deptOption != JobKeys.ALL_DEPARTMENT or locOption != JobKeys.ALL_LOCATION:
                         deptOption.click()
                         locOption.click()
                         gatherJobListWrapper()

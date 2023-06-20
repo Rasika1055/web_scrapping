@@ -11,3 +11,5 @@ class JobKeys:
     SUBTITLE = "subtitle"
     JOB_TYPE = "job_type"
     URL = "url"
+    ALL_DEPARTMENT =  "All Department"
+    ALL_LOCATION = "All Location"
